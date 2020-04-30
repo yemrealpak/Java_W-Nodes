@@ -24,11 +24,7 @@ public class main {
 		int elemansayýsý=0;
 		
 		int c;
-		int vbuffer=0;
-		int j=0;
-		
-		String cityname;
-		
+
 		while ((c = oku.read()) != -1) {
 			
 			char ch = (char) c;
