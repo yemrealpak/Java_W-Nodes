@@ -21,15 +21,44 @@ public class main {
 		
 		String[] neig = new String[100];
 		String cityName;
+		String plakaS;
 		int plaka;
-		int neigbuffer=0;
+		int neigbuffer;
 		
+		String[] splt = null;
 		String str;
 		while((str = oku.readLine()) != null) {
-			System.out.println(str);
+			splt = str.split(",");//okuduktan sonra virgüle göre parçalýyor
+		
+			int commabuffer = 0;
+			commabuffer =  (splt.length - 1);
+			neigbuffer = (commabuffer - 1);
+			//System.out.println("comma adet:" + commabuffer);
+			
+			plakaS = splt[0];
+			plaka = Integer.parseInt(plakaS);
+			//System.out.println("plaka=" + plaka);
+			
+			cityName = splt[1];
+			//System.out.println("sehir adi=" +cityName);
+			
+			
+			int i;
+			for(i=2;i<splt.length;i++) {
+				neig[i-2] = splt[i];
+			}
+			
+			for(i=0;i<(commabuffer-1);i++) {
+				//System.out.println("komsu:" + neig[i]);
+			}
+			//System.out.println("komsu sayýsý:" + neigbuffer);
+			
+			list.addTail(plaka, cityName, neigbuffer, neig);//burda düðüme eklicez
+			
 		}
 		
-		list.addTail(plaka, city_name, neigcitynumber, neigs);//burda düðüme eklicez
+		
+		list.printList();
 		
 		System.out.println("bye");
 		dStream.close();
