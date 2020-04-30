@@ -20,42 +20,13 @@ public class main {
 		LL list = new LL();
 		
 		String[] neig = new String[100];
+		String cityName;
+		int plaka;
 		int neigbuffer=0;
-		int elemansayýsý=0;
 		
-		int c;
-
-		while ((c = oku.read()) != -1) {
-			
-			char ch = (char) c;
-			
-			if(vbuffer == 0) {
-				System.out.println(ch);
-			}
-			
-			if(vbuffer == 1 ) {
-				cityname[j] = ch;
-				j++
-			}
-			
-			if(ch == ',') {
-				
-				vbuffer ++;
-				j = 0;
-			}
-			if(ch == '\n') {
-				
-				vbuffer = 0;
-				j = 0;
-			}
-			
-		}
+		//burda dosyayý okuyup yukardaki deðiþkenlere atýcaz
 		
-		
-		System.out.println("\n");
-		System.out.println("satýr" + elemansayýsý);
-		
-		list.printList();
+		list.addTail(plaka, city_name, neigcitynumber, neigs);//burda düðüme eklicez
 		
 		System.out.println("bye");
 		dStream.close();
