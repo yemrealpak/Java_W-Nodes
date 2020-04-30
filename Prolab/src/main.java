@@ -24,7 +24,10 @@ public class main {
 		int plaka;
 		int neigbuffer=0;
 		
-		//burda dosyayý okuyup yukardaki deðiþkenlere atýcaz
+		String str;
+		while((str = oku.readLine()) != null) {
+			System.out.println(str);
+		}
 		
 		list.addTail(plaka, city_name, neigcitynumber, neigs);//burda düðüme eklicez
 		
