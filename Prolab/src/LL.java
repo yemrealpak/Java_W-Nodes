@@ -38,17 +38,20 @@ public class LL {
 		city pointer = head;
 		int ccityNumber = 0;
 		while( pointer != null ) {
-			System.out.println(pointer.city_name );
+			System.out.println("Plaka" +pointer.plaka);
+			System.out.println("Sehir adý" +pointer.city_name );
 			int i=0;
 			for(i=0;i<pointer.neigcitynumber;i++) {
 				System.out.println( (i+1) + ".komsu:" + pointer.neigs[i] );
 			}
+			System.out.println("komsu adedi" + pointer.neigcitynumber );
+			System.out.println("\n ------------- \n");
 			
 			pointer = pointer.next;
 			ccityNumber++;
 			
 		}
-		System.out.println("Eleman Sayýsý=" + ccityNumber );
+		System.out.println("Eleman Sayisi=" + ccityNumber );
 	}
 	
 	public boolean empty() {
